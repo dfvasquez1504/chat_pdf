@@ -10,12 +10,12 @@ from langchain.chains.question_answering import load_qa_chain
 import platform
 
 # App title and presentation
-st.title('Generación Aumentada por Recuperación (RAG) 💬')
+st.title('Analizador de PDF 💬')
 st.write("Versión de Python:", platform.python_version())
 
 # Load and display image
 try:
-    image = Image.open('Chat_pdf.png')
+    image = Image.open('AgentePDF.png')
     st.image(image, width=350)
 except Exception as e:
     st.warning(f"No se pudo cargar la imagen: {e}")
@@ -25,7 +25,7 @@ with st.sidebar:
     st.subheader("Este Agente te ayudará a realizar análisis sobre el PDF cargado")
 
 # Get API key from user
-ke = st.text_input('Ingresa tu Clave de OpenAI', type="password")
+ke = st.text_input('Ingresa tu Clave de ChatGPT', type="password")
 if ke:
     os.environ['OPENAI_API_KEY'] = ke
 else:
