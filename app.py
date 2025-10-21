@@ -11,7 +11,6 @@ import platform
 
 # App title and presentation
 st.title('Analizador de PDF 💬')
-st.write("Versión de Python:", platform.python_version())
 
 # Load and display image
 try:
